@@ -43,6 +43,7 @@ const NavLink = styled(Link)`
 	font-weight: 700;
 	letter-spacing: 2px;
 	font-family: 'Karla', sans-serif;
+	text-decoration: none;
 
 	&:hover {
 		opacity: 0.5;

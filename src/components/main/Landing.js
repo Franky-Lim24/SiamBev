@@ -69,7 +69,7 @@ const Content = styled.div`
 	padding-right: 24px;
 	margin-left: auto;
 	margin-right: auto;
-
+	padding-top: 40px;
 	@media screen and (min-width: 1024px) {
 		max-width: 41.66666666666667%;
 	}
