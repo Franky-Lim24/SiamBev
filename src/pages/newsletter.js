@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Header from '../components/shared/header';
+import Header from '../components/shared/Header';
 
 const IndexPage = () => {
 	return (
