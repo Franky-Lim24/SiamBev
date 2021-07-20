@@ -47,6 +47,7 @@ const SideMenu = styled.div`
 	top: 0;
 	left: 0;
 	background: white;
+	visibility: ${({ status }) => (status ? 'visible' : 'hidden')};
 	-webkit-transform: ${({ status }) =>
 		status ? 'translate3d(0px, 0px, 0px)' : 'translate3d(-100%, 0px, 0px);'};
 	transform: ${({ status }) =>
