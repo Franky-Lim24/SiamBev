@@ -38,7 +38,7 @@ const Nav = styled.nav`
 
 const NavLink = styled(Link)`
 	padding-right: 40px;
-	font-size: 16px;
+	font-size: 14px;
 	color: black;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -48,6 +48,14 @@ const NavLink = styled(Link)`
 		opacity: 0.5;
 		color: black;
 		text-decoration: none;
+	}
+
+	@media screen and (min-width: 1280px) {
+		font-size: 14px;
+	}
+
+	@media screen and (min-width: 1536px) {
+		font-size: 16px;
 	}
 `;
 
