@@ -54,6 +54,11 @@ const SideMenu = styled.div`
 		status ? 'translate3d(0px, 0px, 0px)' : 'translate3d(-100%, 0px, 0px);'};
 	transition: all 0.5s ease 0s;
 	-webkit-transition: all 0.5s ease 0s;
+
+	@media screen and (min-width: 1023px) {
+		display: none;
+		cursor: pointer;
+	}
 `;
 
 const Nav = styled.div`
@@ -71,6 +76,7 @@ const NavLink = styled(Link)`
 	color: black;
 	font-weight: 700;
 	letter-spacing: 2px;
+	text-decoration: none;
 
 	&:hover {
 		opacity: 0.5;
