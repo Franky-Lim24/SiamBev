@@ -1,15 +1,12 @@
 import * as React from 'react';
 import Header from '../components/header';
-import Landing from '../components/main/Landing';
 
 const IndexPage = () => {
 	return (
 		<main>
-			<title>SiamBev</title>
+			<title>Newsletter</title>
 			<Header></Header>
-			<div>
-				<Landing></Landing>
-			</div>
+			<h1>hello</h1>
 		</main>
 	);
 };
