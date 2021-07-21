@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import img from '../../images/production.webp';
+import img from '../../images/production.png';
 
 const Production = () => {
 	return (
 		<Container>
 			<ImageContainer>
-				<Image src={img} />
+				<Image src={img} alt="production" />
 			</ImageContainer>
 			<Content>
 				<Heading>In-House Production & Packaging</Heading>

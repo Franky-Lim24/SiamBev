@@ -1,5 +1,5 @@
 import React from 'react';
-import main from '../../images/main.webp';
+import main from '../../images/main.png';
 import styled from 'styled-components';
 
 const Landing = () => {
