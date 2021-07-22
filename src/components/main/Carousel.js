@@ -14,7 +14,27 @@ const Carousel = ({ images }) => {
 		arrows: true,
 		autoplay: true,
 		autoplaySpeed: 3000,
-		centerPadding: '200px',
+		responsive: [
+			{
+				breakpoint: 1476,
+				settings: {
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
 	};
 	return (
 		<Container>
@@ -37,5 +57,5 @@ const Image = styled.img`
 const Container = styled.div`
 	max-width: 100%;
 	max-height: 50vh;
-	padding: 0 100px 0 100px;
+	padding: 0 100px 100px 100px;
 `;
