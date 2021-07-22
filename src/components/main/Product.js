@@ -39,10 +39,20 @@ export default Product;
 const Image = styled.img`
 	width: auto !important;
 	height: 45vh;
+
+	@media screen and (orientation: portrait) {
+		height: 50vw;
+	}
 `;
 
 const Container = styled.div`
 	max-width: 100%;
 	max-height: 50vh;
 	padding: 0 100px 100px 100px;
+	margin-bottom: 100px;
+
+	@media screen and (orientation: portrait) {
+		height: 50vw;
+		padding: 0 40px 100px 40px;
+	}
 `;
