@@ -107,10 +107,12 @@ const Content = styled.div`
 	padding-right: 12px;
 	display: flex;
 	flex-direction: column;
-	margin-top: 100px;
 
 	@media screen and (min-width: 768px) {
 		max-width: 50%;
+	}
+	@media screen and (orientation: portrait) {
+		margin-top: 100px;
 	}
 `;
 

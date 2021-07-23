@@ -35,6 +35,7 @@ const Container = styled.div`
 	margin-right: auto;
 	margin-top: 100px;
 	margin-bottom: 200px;
+
 	@media screen and (min-width: 1024px) {
 		width: 984px;
 	}
