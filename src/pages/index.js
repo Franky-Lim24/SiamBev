@@ -11,6 +11,9 @@ import History from '../components/main/History';
 import Product from '../components/main/Product';
 import { bottles } from '../components/data/bottles';
 import { products } from '../components/data/products';
+import Contact from '../components/main/Contact';
+import Subscribe from '../components/main/Subscribe';
+import Footer from '../components/shared/Footer';
 
 const IndexPage = () => {
 	return (
@@ -26,6 +29,9 @@ const IndexPage = () => {
 			<History />
 			<Product images={bottles} />
 			<Banner image={BannerImg2} title="Contact Us" />
+			<Contact />
+			<Subscribe />
+			<Footer />
 		</main>
 	);
 };

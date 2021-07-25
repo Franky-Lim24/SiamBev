@@ -2,3 +2,22 @@
 .slick-prev:before {
 	color: #000 !important;
 }
+
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+.subscribeInput {
+	background: transparent;
+	color: white !important;
+	border-color: white !important;
+	margin-right: 30px;
+	&:hover {
+		background-color: rgba(22, 22, 22, 0.5) !important;
+	}
+}
+
+.formContainer {
+	max-width: 60%;
+	width: 60%;
+}

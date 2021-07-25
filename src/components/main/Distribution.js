@@ -52,13 +52,14 @@ export default Distribution;
 const Break = styled.p`
 	line-height: 1.8;
 `;
+
 const ImageContainer = styled.div`
 	max-width: 100%;
 	flex-basis: 50%;
 	padding-right: 12px;
 	padding-left: 12px;
 	display: flex;
-	align-item: center;
+	align-items: center;
 	justify-content: center;
 
 	@media screen and (min-width: 768px) {

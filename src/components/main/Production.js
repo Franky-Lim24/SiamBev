@@ -49,7 +49,7 @@ const ImageContainer = styled.div`
 	padding-right: 12px;
 	padding-left: 12px;
 	display: flex;
-	align-item: center;
+	align-items: center;
 	justify-content: center;
 
 	@media screen and (min-width: 768px) {
