@@ -14,6 +14,7 @@ import { products } from '../components/data/products';
 import Contact from '../components/main/Contact';
 import Subscribe from '../components/main/Subscribe';
 import Footer from '../components/shared/Footer';
+import Message from '../components/main/Message';
 
 const IndexPage = () => {
 	return (
@@ -32,6 +33,7 @@ const IndexPage = () => {
 			<Contact />
 			<Subscribe />
 			<Footer />
+			<Message />
 		</main>
 	);
 };

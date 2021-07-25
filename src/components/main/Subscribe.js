@@ -108,6 +108,11 @@ const FormContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+	}
 `;
 
 const Subtitle = styled.p`
@@ -141,8 +146,9 @@ const Error = styled.p`
 
 const Button = styled.button`
 	font-size: 14px;
+	width: 100%;
+	margin-top: 20px;
 	border: 2px solid white;
-	width: 200px;
 	background-color: transparent;
 	border-radius: 48px;
 	min-height: 56px;
@@ -156,7 +162,6 @@ const Button = styled.button`
 	text-decoration: none;
 	letter-spacing: 2px;
 	color: white;
-	align-self: flex-start;
 
 	&:hover {
 		background-color: white;
@@ -165,6 +170,9 @@ const Button = styled.button`
 
 	@media screen and (min-width: 768px) {
 		font-size: 16px;
+		align-self: flex-start;
+		width: 200px;
+		margin-top: 0;
 	}
 `;
 
