@@ -1,3 +1,26 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #212121;
+		border-radius: 5px;
+	}
+
+	&:hover::-webkit-scrollbar-thumb {
+		background: #616060;
+	}
+}
+
 .slick-next:before,
 .slick-prev:before {
 	color: #000 !important;
