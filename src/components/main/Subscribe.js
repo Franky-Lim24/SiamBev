@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import image from '../../images/banner3.png';
 import FloatingLabelInput from 'react-floating-label-input';
 import emailjs from 'emailjs-com';
+import '../styles.scss';
 
 const Subscribe = () => {
 	const [email, setEmail] = useState('');
