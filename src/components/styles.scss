@@ -56,3 +56,19 @@ body {
 .svgDialog {
 	margin-top: -10px;
 }
+
+label.floatingLab,
+input.floatingLab {
+	color: black;
+	font-family: 'Old Standard TT', serif;
+	font-size: 18px;
+	padding-left: 10px;
+
+	&:hover {
+		background-color: #eee;
+	}
+}
+div.floatingLab {
+	margin-top: 40px;
+	border-color: black;
+}

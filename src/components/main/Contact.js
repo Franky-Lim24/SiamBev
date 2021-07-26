@@ -105,6 +105,7 @@ const Contact = () => {
 						<Heading>Drop us a line!</Heading>
 						<form onSubmit={sendMessage}>
 							<FloatingLabelInput
+								className="floatingLab"
 								id="name"
 								label="Name"
 								onChange={(e) => {
@@ -116,6 +117,7 @@ const Contact = () => {
 							/>
 							{nameErr.length ? <Error>{nameErr}</Error> : null}
 							<FloatingLabelInput
+								className="floatingLab"
 								id="email"
 								label="Email"
 								onChange={(e) => {

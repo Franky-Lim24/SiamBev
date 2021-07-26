@@ -109,6 +109,7 @@ const Message = () => {
 						<form onSubmit={handleSubmit}>
 							<FormContainer>
 								<FloatingLabelInput
+									className="floatingLab"
 									id="name"
 									label="Name"
 									onChange={(e) => {
@@ -120,6 +121,7 @@ const Message = () => {
 								/>
 								{nameErr.length ? <Error>{nameErr}</Error> : null}
 								<FloatingLabelInput
+									className="floatingLab"
 									id="email"
 									label="Email"
 									onChange={(e) => {
