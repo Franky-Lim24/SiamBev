@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import img from '../../images/distribution.png';
+import img from '../../images/distribution.webp';
 import Fade from 'react-reveal/Fade';
 import withReveal from 'react-reveal/withReveal';
 import Zoom from 'react-reveal/Zoom';

@@ -1,5 +1,5 @@
 import React from 'react';
-import main from '../../images/main.png';
+import main from '../../images/main.webp';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import withReveal from 'react-reveal/withReveal';

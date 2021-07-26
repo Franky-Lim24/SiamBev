@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import img from '../../images/contact.png';
+import img from '../../images/contact.webp';
 import FloatingLabelInput from 'react-floating-label-input';
 import emailjs from 'emailjs-com';
 import Fade from 'react-reveal/Fade';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import image from '../../images/banner3.png';
+import image from '../../images/banner3.webp';
 import FloatingLabelInput from 'react-floating-label-input';
 import emailjs from 'emailjs-com';
 import '../styles.scss';
