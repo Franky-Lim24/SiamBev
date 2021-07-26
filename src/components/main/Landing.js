@@ -1,6 +1,9 @@
 import React from 'react';
 import main from '../../images/main.png';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
+import withReveal from 'react-reveal/withReveal';
+import Zoom from 'react-reveal/Zoom';
 
 const Landing = () => {
 	return (
@@ -50,7 +53,6 @@ const Row = styled.div`
 		width: 1280px;
 	}
 `;
-
 const Text = styled.span`
 	font-size: 19px;
 	overflow-wrap: break-word;
@@ -74,39 +76,47 @@ const Content = styled.div`
 		max-width: 41.66666666666667%;
 	}
 `;
+const Heading = withReveal(
+	styled.h1`
+		letter-spacing: 4px;
+		line-height: 1.2;
+		font-weight: 700;
+		color: black;
+		font-family: 'Karla', sans-serif;
 
-const Heading = styled.h1`
-	letter-spacing: 4px;
-	line-height: 1.2;
-	font-weight: 700;
-	color: black;
-	font-family: 'Karla', sans-serif;
+		@media screen and (min-width: 1024px) {
+			font-size: 42px;
+		}
+		@media screen and (min-width: 1280px) {
+			font-size: 54px;
+		}
+		@media screen and (min-width: 1536px) {
+			font-size: 56px;
+		}
+	`,
+	<Fade left />
+);
 
-	@media screen and (min-width: 1024px) {
-		font-size: 42px;
-	}
-	@media screen and (min-width: 1280px) {
-		font-size: 54px;
-	}
-	@media screen and (min-width: 1536px) {
-		font-size: 56px;
-	}
-`;
+const Subheading = withReveal(
+	styled.p`
+		font-family: 'Old Standard TT', serif;
+		line-height: 1.5;
+		letter-spacing: 2px;
+		margin-right: 10px;
+	`,
+	<Fade left />
+);
 
-const Subheading = styled.p`
-	font-family: 'Old Standard TT', serif;
-	line-height: 1.5;
-	letter-spacing: 2px;
-	margin-right: 10px;
-`;
+const ImageContainer = withReveal(
+	styled.div`
+		max-width: 100%;
 
-const ImageContainer = styled.div`
-	max-width: 100%;
-
-	@media screen and (min-width: 1024px) {
-		max-width: 58%;
-	}
-`;
+		@media screen and (min-width: 1024px) {
+			max-width: 58%;
+		}
+	`,
+	<Zoom />
+);
 
 const Image = styled.img`
 	max-width: 100%;

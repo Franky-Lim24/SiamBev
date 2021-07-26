@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
+import withReveal from 'react-reveal/withReveal';
 
 const History = () => {
 	return (
@@ -47,38 +49,44 @@ const Container = styled.div`
 	}
 `;
 
-const Subheading = styled.p`
-	text-align: center;
-	line-height: 1.8;
-	font-weight: 400;
-	overflow-wrap: break-word;
-	font-family: 'Old Standard TT', serif;
-	letter-spacing: normal;
+const Subheading = withReveal(
+	styled.p`
+		text-align: center;
+		line-height: 1.8;
+		font-weight: 400;
+		overflow-wrap: break-word;
+		font-family: 'Old Standard TT', serif;
+		letter-spacing: normal;
 
-	@media screen and (min-width: 1280px) {
-		font-size: 16px;
-	}
+		@media screen and (min-width: 1280px) {
+			font-size: 16px;
+		}
 
-	@media screen and (min-width: 1536px) {
-		font-size: 18px;
-	}
-`;
+		@media screen and (min-width: 1536px) {
+			font-size: 18px;
+		}
+	`,
+	<Fade up />
+);
 
-const Heading = styled.h4`
-	line-height: 1.25;
-	max-width: 100%;
-	font-size: 19px;
-	font-weight: 700;
-	font-family: 'Karla', sans-serif;
-	letter-spacing: 2px;
-	overflow-wrap: break-word;
-	text-align: center;
-	margin-bottom: 24px;
+const Heading = withReveal(
+	styled.h4`
+		line-height: 1.25;
+		max-width: 100%;
+		font-size: 19px;
+		font-weight: 700;
+		font-family: 'Karla', sans-serif;
+		letter-spacing: 2px;
+		overflow-wrap: break-word;
+		text-align: center;
+		margin-bottom: 24px;
 
-	@media screen and (min-width: 1536px) {
-		font-size: 21px;
-	}
-`;
+		@media screen and (min-width: 1536px) {
+			font-size: 21px;
+		}
+	`,
+	<Fade up />
+);
 
 const Content = styled.div`
 	display: flex;

@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import img from '../../images/contact.png';
 import FloatingLabelInput from 'react-floating-label-input';
 import emailjs from 'emailjs-com';
+import Fade from 'react-reveal/Fade';
+import withReveal from 'react-reveal/withReveal';
+import Zoom from 'react-reveal/Zoom';
 
 const Contact = () => {
 	const [contact, setContact] = useState(false);
@@ -101,57 +104,59 @@ const Contact = () => {
 						</Button>
 					</ContactContent>
 				) : status !== 'done' ? (
-					<ContactContent>
-						<Heading>Drop us a line!</Heading>
-						<form onSubmit={sendMessage}>
-							<FloatingLabelInput
-								className="floatingLab"
-								id="name"
-								label="Name"
-								onChange={(e) => {
-									setName(e.target.value);
-									validateForm();
-								}}
-								name="name"
-								value={name}
-							/>
-							{nameErr.length ? <Error>{nameErr}</Error> : null}
-							<FloatingLabelInput
-								className="floatingLab"
-								id="email"
-								label="Email"
-								onChange={(e) => {
-									setEmail(e.target.value);
-									validateForm();
-								}}
-								name="email"
-								value={email}
-							/>
-							{emailErr.length ? <Error>{emailErr}</Error> : null}
-							<Textarea
-								placeholder="Message"
-								cols="50"
-								rows="6"
-								onChange={(e) => {
-									setMessage(e.target.value);
-									validateForm();
-								}}
-								name="message"
-								value={message}
-							/>
-							{messageErr.length ? <Error>{messageErr}</Error> : null}
-							<ReCaptcha>
-								This site is protected by reCAPTCHA and the Google Privacy
-								Policy and Terms of Service apply.
-							</ReCaptcha>
-							<ButtonGroup>
-								<Button disabled={disable} type="submit">
-									{status}
-								</Button>
-								<Span onClick={() => setContact(false)}>Cancel</Span>
-							</ButtonGroup>
-						</form>
-					</ContactContent>
+					<Fade left>
+						<ContactContent>
+							<Heading>Drop us a line!</Heading>
+							<form onSubmit={sendMessage}>
+								<FloatingLabelInput
+									className="floatingLab"
+									id="name"
+									label="Name"
+									onChange={(e) => {
+										setName(e.target.value);
+										validateForm();
+									}}
+									name="name"
+									value={name}
+								/>
+								{nameErr.length ? <Error>{nameErr}</Error> : null}
+								<FloatingLabelInput
+									className="floatingLab"
+									id="email"
+									label="Email"
+									onChange={(e) => {
+										setEmail(e.target.value);
+										validateForm();
+									}}
+									name="email"
+									value={email}
+								/>
+								{emailErr.length ? <Error>{emailErr}</Error> : null}
+								<Textarea
+									placeholder="Message"
+									cols="50"
+									rows="6"
+									onChange={(e) => {
+										setMessage(e.target.value);
+										validateForm();
+									}}
+									name="message"
+									value={message}
+								/>
+								{messageErr.length ? <Error>{messageErr}</Error> : null}
+								<ReCaptcha>
+									This site is protected by reCAPTCHA and the Google Privacy
+									Policy and Terms of Service apply.
+								</ReCaptcha>
+								<ButtonGroup>
+									<Button disabled={disable} type="submit">
+										{status}
+									</Button>
+									<Span onClick={() => setContact(false)}>Cancel</Span>
+								</ButtonGroup>
+							</form>
+						</ContactContent>
+					</Fade>
 				) : (
 					<ContactContent align="center">
 						<svg
@@ -310,33 +315,39 @@ const Break = styled.p`
 	line-height: 1.8;
 `;
 
-const Subheading = styled.p`
-	line-height: 1.8;
-	font-weight: 400;
-	overflow-wrap: break-word;
-	font-family: 'Old Standard TT', serif;
-	letter-spacing: normal;
-	font-size: 16px;
+const Subheading = withReveal(
+	styled.p`
+		line-height: 1.8;
+		font-weight: 400;
+		overflow-wrap: break-word;
+		font-family: 'Old Standard TT', serif;
+		letter-spacing: normal;
+		font-size: 16px;
 
-	@media screen and (min-width: 1536px) {
-		font-size: 18px;
-	}
-`;
+		@media screen and (min-width: 1536px) {
+			font-size: 18px;
+		}
+	`,
+	<Fade left />
+);
 
-const Heading = styled.h4`
-	line-height: 1.25;
-	max-width: 100%;
-	font-size: 22px;
-	font-weight: 400;
-	font-family: 'Old Standard TT', serif;
-	letter-spacing: 2px;
-	overflow-wrap: break-word;
-	margin-bottom: 24px;
+const Heading = withReveal(
+	styled.h4`
+		line-height: 1.25;
+		max-width: 100%;
+		font-size: 22px;
+		font-weight: 400;
+		font-family: 'Old Standard TT', serif;
+		letter-spacing: 2px;
+		overflow-wrap: break-word;
+		margin-bottom: 24px;
 
-	@media screen and (min-width: 1536px) {
-		font-size: 24px;
-	}
-`;
+		@media screen and (min-width: 1536px) {
+			font-size: 24px;
+		}
+	`,
+	<Fade left />
+);
 
 const Image = styled.div`
 	max-width: 100%;
@@ -354,13 +365,16 @@ const Image = styled.div`
 	}
 `;
 
-const Img = styled.img`
-	max-width: 100%;
+const Img = withReveal(
+	styled.img`
+		max-width: 100%;
 
-	@media screen and (max-width: 767px) {
-		height: calc((100vw - 48px) / 1.33);
-	}
-`;
+		@media screen and (max-width: 767px) {
+			height: calc((100vw - 48px) / 1.33);
+		}
+	`,
+	<Zoom />
+);
 
 const Container = styled.div`
 	margin-right: auto;

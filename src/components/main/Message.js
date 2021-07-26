@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import FloatingLabelInput from 'react-floating-label-input';
 import emailjs from 'emailjs-com';
+import Fade from 'react-reveal/Fade';
+import withReveal from 'react-reveal/withReveal';
 
 const Message = () => {
 	const [status, setStatus] = useState(true);
@@ -71,90 +73,93 @@ const Message = () => {
 	return (
 		<>
 			{!status ? (
-				<Dialog>
-					<Title>SiamBev</Title>
-					<Chat>
-						<Msg>
-							Hi! Let us know how we can help and we’ll respond shortly.
-						</Msg>
-						<svg
-							width="33px"
-							height="16px"
-							viewBox="0 0 33 16"
-							xmlns="http://www.w3.org/2000/svg"
-							className="svgDialog"
-						>
-							<path d="M0.342304 14.5C7.35025 6.3293 3.35025 0.829295 0 0.0.0 0.0 5.4 2.1 32.3502 0.329295C32.3503 3.8293 -3.13481 20.7261 0.342304 14.5Z"></path>
-						</svg>
-					</Chat>
-					{statusBtn === 'Sent' ? (
-						<FormContainer status="Sent">
+				<Fade>
+					<Dialog>
+						<Title>SiamBev</Title>
+						<Chat>
+							<Msg>
+								Hi! Let us know how we can help and we’ll respond shortly.
+							</Msg>
 							<svg
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								color="#0078d7"
-								width="72"
-								height="72"
+								width="33px"
+								height="16px"
+								viewBox="0 0 33 16"
+								xmlns="http://www.w3.org/2000/svg"
+								className="svgDialog"
 							>
-								<path
-									fillRule="evenodd"
-									d="M12 4a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm0 1.5A6.507 6.507 0 0 0 5.5 12c0 3.584 2.915 6.5 6.5 6.5 3.584 0 6.5-2.916 6.5-6.5S15.584 5.5 12 5.5zm3.316 4.249a.72.72 0 0 1 .195.533.719.719 0 0 1-.252.512l-4.099 3.491a.846.846 0 0 1-.56.209.845.845 0 0 1-.62-.268l-1.298-1.419a.723.723 0 0 1 .056-1.046.774.774 0 0 1 1.067.055l.845.931 3.6-3.053a.771.771 0 0 1 1.066.055z"
-								></path>
+								<path d="M0.342304 14.5C7.35025 6.3293 3.35025 0.829295 0 0.0.0 0.0 5.4 2.1 32.3502 0.329295C32.3503 3.8293 -3.13481 20.7261 0.342304 14.5Z"></path>
 							</svg>
-							<Thanks>
-								Thanks for the message. We'll get back to you as soon as we can.
-							</Thanks>
-						</FormContainer>
-					) : (
-						<form onSubmit={handleSubmit}>
-							<FormContainer>
-								<FloatingLabelInput
-									className="floatingLab"
-									id="name"
-									label="Name"
-									onChange={(e) => {
-										setName(e.target.value);
-										validateForm();
-									}}
-									name="name"
-									value={name}
-								/>
-								{nameErr.length ? <Error>{nameErr}</Error> : null}
-								<FloatingLabelInput
-									className="floatingLab"
-									id="email"
-									label="Email"
-									onChange={(e) => {
-										setEmail(e.target.value);
-										validateForm();
-									}}
-									name="email"
-									value={email}
-								/>
-								{emailErr.length ? <Error>{emailErr}</Error> : null}
-								<Textarea
-									placeholder="How can we help?"
-									cols="50"
-									rows="6"
-									onChange={(e) => {
-										setMessage(e.target.value);
-										validateForm();
-									}}
-									name="message"
-									value={message}
-								/>
-								{messageErr.length ? <Error>{messageErr}</Error> : null}
-								<Button disabled={disable} type="submit">
-									{statusBtn}
-								</Button>
-								<ReCaptcha>
-									This site is protected by reCAPTCHA and the Google Privacy
-									Policy and Terms of Service apply.
-								</ReCaptcha>
+						</Chat>
+						{statusBtn === 'Sent' ? (
+							<FormContainer status="Sent">
+								<svg
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									color="#0078d7"
+									width="72"
+									height="72"
+								>
+									<path
+										fillRule="evenodd"
+										d="M12 4a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm0 1.5A6.507 6.507 0 0 0 5.5 12c0 3.584 2.915 6.5 6.5 6.5 3.584 0 6.5-2.916 6.5-6.5S15.584 5.5 12 5.5zm3.316 4.249a.72.72 0 0 1 .195.533.719.719 0 0 1-.252.512l-4.099 3.491a.846.846 0 0 1-.56.209.845.845 0 0 1-.62-.268l-1.298-1.419a.723.723 0 0 1 .056-1.046.774.774 0 0 1 1.067.055l.845.931 3.6-3.053a.771.771 0 0 1 1.066.055z"
+									></path>
+								</svg>
+								<Thanks>
+									Thanks for the message. We'll get back to you as soon as we
+									can.
+								</Thanks>
 							</FormContainer>
-						</form>
-					)}
-				</Dialog>
+						) : (
+							<form onSubmit={handleSubmit}>
+								<FormContainer>
+									<FloatingLabelInput
+										className="floatingLab"
+										id="name"
+										label="Name"
+										onChange={(e) => {
+											setName(e.target.value);
+											validateForm();
+										}}
+										name="name"
+										value={name}
+									/>
+									{nameErr.length ? <Error>{nameErr}</Error> : null}
+									<FloatingLabelInput
+										className="floatingLab"
+										id="email"
+										label="Email"
+										onChange={(e) => {
+											setEmail(e.target.value);
+											validateForm();
+										}}
+										name="email"
+										value={email}
+									/>
+									{emailErr.length ? <Error>{emailErr}</Error> : null}
+									<Textarea
+										placeholder="How can we help?"
+										cols="50"
+										rows="6"
+										onChange={(e) => {
+											setMessage(e.target.value);
+											validateForm();
+										}}
+										name="message"
+										value={message}
+									/>
+									{messageErr.length ? <Error>{messageErr}</Error> : null}
+									<Button disabled={disable} type="submit">
+										{statusBtn}
+									</Button>
+									<ReCaptcha>
+										This site is protected by reCAPTCHA and the Google Privacy
+										Policy and Terms of Service apply.
+									</ReCaptcha>
+								</FormContainer>
+							</form>
+						)}
+					</Dialog>
+				</Fade>
 			) : null}
 			<Container onClick={() => setStatus(!status)} bg={status}>
 				{status ? (
