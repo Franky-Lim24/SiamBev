@@ -272,32 +272,35 @@ const Textarea = styled.textarea`
 	}
 `;
 
-const Button = styled.button`
-	font-size: 14px;
-	border: 2px solid black;
-	background-color: transparent;
-	border-radius: 48px;
-	min-height: 56px;
-	padding: 8px 40px 8px 40px;
-	transition-timing-function: ease-in-out;
-	transition-duration: 0.3s;
-	transition-property: background-color;
-	text-align: center;
-	font-weight: 700;
-	font-family: Karla, sans-serif;
-	text-decoration: none;
-	letter-spacing: 2px;
-	max-width: ${(props) => props.w};
+const Button = withReveal(
+	styled.button`
+		font-size: 14px;
+		border: 2px solid black;
+		background-color: transparent;
+		border-radius: 48px;
+		min-height: 56px;
+		padding: 8px 40px 8px 40px;
+		transition-timing-function: ease-in-out;
+		transition-duration: 0.3s;
+		transition-property: background-color;
+		text-align: center;
+		font-weight: 700;
+		font-family: Karla, sans-serif;
+		text-decoration: none;
+		letter-spacing: 2px;
+		max-width: ${(props) => props.w};
 
-	&:hover {
-		background-color: black;
-		color: white;
-	}
+		&:hover {
+			background-color: black;
+			color: white;
+		}
 
-	@media screen and (min-width: 768px) {
-		font-size: 16px;
-	}
-`;
+		@media screen and (min-width: 768px) {
+			font-size: 16px;
+		}
+	`,
+	<Fade left />
+);
 
 const ContactContent = styled.div`
 	display: flex;
