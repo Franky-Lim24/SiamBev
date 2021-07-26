@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import FloatingLabelInput from 'react-floating-label-input';
 import emailjs from 'emailjs-com';
 import Fade from 'react-reveal/Fade';
-import withReveal from 'react-reveal/withReveal';
 
 const Message = () => {
 	const [status, setStatus] = useState(true);
@@ -73,8 +72,8 @@ const Message = () => {
 	return (
 		<>
 			{!status ? (
-				<Fade>
-					<Dialog>
+				<Dialog>
+					<Fade>
 						<Title>SiamBev</Title>
 						<Chat>
 							<Msg>
@@ -158,8 +157,8 @@ const Message = () => {
 								</FormContainer>
 							</form>
 						)}
-					</Dialog>
-				</Fade>
+					</Fade>
+				</Dialog>
 			) : null}
 			<Container onClick={() => setStatus(!status)} bg={status}>
 				{status ? (
