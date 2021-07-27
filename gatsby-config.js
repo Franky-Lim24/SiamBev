@@ -19,5 +19,8 @@ module.exports = {
 				ssr: true,
 			},
 		},
+		{
+			resolve: `gatsby-plugin-gatsby-cloud`,
+		},
 	],
 };
