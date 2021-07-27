@@ -27,6 +27,8 @@ const Subscribe = () => {
 		if (validateEmail()) {
 			setDisable(true);
 			console.log(process.env.user_id);
+			console.log(process.env.service_id);
+
 			emailjs
 				.sendForm(
 					process.env.service_id,
