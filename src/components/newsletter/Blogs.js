@@ -37,6 +37,10 @@ const Item = styled.div`
 	justify-content: center;
 	align-self: center;
 	flex-direction: column;
+
+	@media screen and (min-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const Hr = styled.hr`
@@ -98,16 +102,28 @@ const Date = styled.p`
 `;
 
 const Content = styled.div`
-	max-width: 50%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
 	margin-left: 40px;
+	padding: 0 20px 0 20px;
+	@media screen and (min-width: 768px) {
+		width: 70%;
+		padding: 0;
+	}
+	@media screen and (min-width: 1024px) {
+		width: 50%;
+		padding: 0;
+	}
 `;
 
 const ImgContainer = styled.div`
-	align-self: flex-start;
+	margin-bottom: 100px;
+	@media screen and (min-width: 768px) {
+		align-self: flex-start;
+	}
 `;
 
 const Blog = withReveal(
@@ -122,7 +138,11 @@ const Blog = withReveal(
 		margin-right: auto;
 		margin-top: 50px;
 		margin-bottom: 50px;
+		flex-direction: column;
 
+		@media screen and (min-width: 768px) {
+			flex-direction: row;
+		}
 		@media screen and (min-width: 1024px) {
 			padding-right: 56px;
 			padding-left: 56px;

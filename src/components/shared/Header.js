@@ -72,7 +72,7 @@ const Bars = styled(FaBars)`
 		position: absolute;
 		top: 0;
 		left: 0;
-		transform: translate(75%, 175%);
+		transform: translate(75%, 100%);
 		font-size: 1.8rem;
 		cursor: pointer;
 	}
