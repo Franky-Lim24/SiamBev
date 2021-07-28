@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { news } from '../data/news';
 import { Link } from 'gatsby';
@@ -139,7 +139,7 @@ const Blog = withReveal(
 		margin-top: 50px;
 		margin-bottom: 50px;
 		flex-direction: column;
-
+		align-items: flex-start;
 		@media screen and (min-width: 768px) {
 			flex-direction: row;
 		}
@@ -161,7 +161,7 @@ const Blog = withReveal(
 const Container = styled.div`
 	background-color: rgb(22, 22, 22);
 	width: 100%;
-	padding: 100px 0 100px 0;
+	padding: 50px 0 50px 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
